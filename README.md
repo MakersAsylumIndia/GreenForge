@@ -1,89 +1,43 @@
-# 📘 Welcome to the IS Project Documentation Template!
+# 🌿 Automatic Greenhouse: Precision Agritech
+**Developed by Prolabs Robotics**
 
-Hey there! 👋
-
-This repository is your home for documenting your **Innovation School Project** and starting your **maker portfolio**.  
-You’ll be using the **GitHub Wiki** to update all your project details in a structured format.
+An autonomous, AI-driven cultivation system designed to eliminate manual labor and bypass geographical or seasonal constraints. By integrating solar energy and precision environmental control, this project optimizes plant growth cycles for maximum efficiency.
 
 ---
 
-## 🧠 What to Do First
+## 🚀 Key Applications
 
-Start by writing a **brief introduction** to your project right here in this `README.md` file:
-
-🔹 What problem are you solving?  
-🔹 What’s your proposed solution?
-
-Just 2–3 lines are enough. This helps others quickly understand what your project is about.
-
-Click on the ✏️ PENCIL icon next to the README title above, and you can edit the README directly from within your browser.
+* **Radical Cost Reduction:** Engineered to make food **5–10x cheaper** by removing labor costs and optimizing resource consumption.
+* **Total Autonomy:** Zero manual intervention. The system is powered by **Solar Energy**, ensuring sustainable operations with minimal upkeep.
+* **Climate Independence:** Grow anything, anywhere, anytime. Whether it is **Mangoes in winter**, **Strawberries in Antarctica**, or **Mint in space**, the system simulates the ideal micro-environment.
+* **Vertical Optimization:** Achieve **2–3x yield** within the same footprint compared to traditional farming methods.
 
 ---
 
-## 🛠 Where to Document Everything Else
+## 🛠 Technical Architecture
 
-We’ve already created a standard set of [**Wiki pages**](https://github.com/MakersAsylumIndia/Bowl-Buddy/wiki) for your project in this repository — you just need to **update them with your project information**.
+The greenhouse utilizes a closed-loop feedback system to maintain homeostasis:
 
-Each section is ready with headings like:
-
-- Project Title
-- Problem Statement
-- Bill of Materials (BOM)
-- Solution Overview
-- SDG Goals Associated
-- Circuit & CAD Files
-- Media Gallery
-- License
-
-Please **do not delete the headings** — just replace the placeholder content under each.
+1.  **Sensing Layer:** Real-time monitoring of soil moisture, ambient temperature, humidity, and $CO_2$ levels.
+2.  **Logic Layer:** A Python 3.13 controller processes sensor data to trigger actuators based on crop-specific requirements.
+3.  **Actuation Layer:** Automated irrigation, motorized ventilation, and full-spectrum LED arrays powered by a solar-charged battery bank.
 
 ---
 
-## 📚 How to Edit the GitHub Wiki Pages
+## 📈 Yield Comparison
 
-Follow these official GitHub help guides to learn how to edit your Wiki pages:
-
-🔗 [How to Add or Edit Wiki Pages](https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages)  
-🔗 [How to Format and Save Content in Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/editing-wiki-content)
-
----
-
-## 📸 Visual Guide (Optional)
-
-If you’re unsure where the Wiki tab is:  
-📍 It’s on the top-right area of the repository (next to Code, Issues, Pull Requests).
-
-You’ll find your project listed there. Click on it, then click **“Edit”** to begin updating.
+| Feature | Traditional Farming | Prolabs Greenhouse |
+| :--- | :--- | :--- |
+| **Labor** | Manual / Heavy | Fully Autonomous |
+| **Energy Source** | Grid / Fuel | Solar (Off-grid) |
+| **Yield Efficiency** | 1x | 2x - 3x |
+| **Seasonality** | Weather Dependent | 365 Days/Year |
+| **Cost per Unit** | Standard | 80–90% Reduction |
 
 ---
 
-## 🤝 Need Help?
 
-If you're confused at any step:
-- Ask your mentor or coordinator
-- Or drop a message in our Discord/WhatsApp support group
-
-Let’s build something awesome! 🚀
-
-## License
-
-Licenses
-
-<a href="LICENSE.md"><img src="Media\Images\Licenses_facts.svg" width="400" alt="Open Source Licenses Facts"/></a>
-
-#### Hardware
-CERN Open Hardware License Version 2 - Strongly Reciprocal ([CERN-OHL-S-2.0](https://spdx.org/licenses/CERN-OHL-S-2.0.html)).
-
-#### Software
-MIT open source [license](http://opensource.org/licenses/MIT).
-
-#### Documentation:
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-
----
-
-## 📬 Contact/Team
-
-> _List team members and contact emails or GitHub profiles._
-
----
+## Contact & Contributers
+1. Aarav J. - aaravjaisingh@gmail.com
+2. Samvedh N. - nsamvedh@gmail.com
+3. Vivan R. - vivanrajpuria@gmail.com
