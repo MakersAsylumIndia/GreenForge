@@ -1,0 +1,87 @@
+#include <Wire.h>
+#include "RTClib.h"
+#include "DHT.h"
+
+#define DHTTYPE DHT11 
+
+String region = "india";
+String plant = "grass";
+
+int maxTemp = 30; 
+int minTemp = 27; 
+
+RTC_DS3231 rtc;
+
+const int cooler = 9;
+const int heater = 8;
+const int dhtPin = A0; 
+
+DHT dht(dhtPin, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(cooler, OUTPUT);
+  pinMode(heater, OUTPUT);
+
+  dht.begin();
+
+  if (plant == "grass") {
+    maxTemp = 30;
+    minTemp = 30;
+  }
+
+  if (!rtc.begin()) {
+    Serial.println("Couldn't find RTC");
+    while (1);
+  }
+
+  if (rtc.lostPower()) {
+    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+  }
+}
+
+void loop() {
+  DateTime now = rtc.now();
+  float temp = dht.readTemperature();
+
+  if (isnan(temp)) {
+    Serial.println("Failed to read from DHT sensor!");
+  } else {
+    if (temp > maxTemp) {
+      digitalWrite(cooler, HIGH);
+      digitalWrite(heater, LOW);
+    } 
+    else if (temp < minTemp) {
+      digitalWrite(cooler, LOW);
+      digitalWrite(heater, HIGH);
+    } 
+    else {
+      digitalWrite(cooler, LOW);
+      digitalWrite(heater, LOW);
+    }
+
+    printDateTime(now);
+    Serial.print(" | Temp: ");
+    Serial.print(temp);
+    Serial.println("Â°C");
+  }
+
+  delay(2000); 
+}
+
+void printDateTime(DateTime dt) {
+  Serial.print(dt.year());
+  Serial.print('/');
+  Serial.print(dt.month());
+  Serial.print('/');
+  Serial.print(dt.day());
+  Serial.print(" ");
+  Serial.print(dt.hour());
+  Serial.print(':');
+  if (dt.minute() < 10) Serial.print('0');
+  Serial.print(dt.minute());
+  Serial.print(':');
+  if (dt.second() < 10) Serial.print('0');
+  Serial.print(dt.second());
+}
